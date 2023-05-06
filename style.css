@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* 
+Them Name: Portfolio
+*/
+@media(min-width:992px){
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
+@media(min-width:922px){
+  .navbar-brand {
+    font-size: 30px;
+    margin: 5px 0;
+    padding: 2rem 0;
+    color: rgba(255,255,255, 0.5) !important;
+  }
+  .nav-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(255,255,255, 0.5) !important;
+    height: 20px;
+  }
+  #mainNav.navbar-shrink {
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #000 !important;
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #000 !important;
+    padding: 2rem 1.5rem 2rem;
+    border-bottom: 0.25rem solid transparent;
+    height: 20px;
+  }
+  #mainNav.navbar-shrink .nav-link:hover {color: #64a19d !important;
+
+  }
+
+  /* navメニュー　下線 */
+.nav-item {
+  padding: 0;
+}
+
+  .navbar-nav li a {
+    position: relative;
+  }
+  .navbar-nav li a:hover{
+    color: #64a19d !important;
+  }
+  .navbar-nav li a::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: #64a19d;
+    transition: all .3s;
+    transform: scale(0,1);
+    transform-origin: center top;
+  }
+  .navbar-nav li a:hover::after{
+    transform: scale(1,1);
+  }
+}
+
+
+
+
+@media(max-width:992px){
+  .navbar {
+    background-color: #fff;
+  }
+  .p-1 {
+    color: #000;
+  }
+  .nav-link {
+    color: #000 !important;
+  }
+  .navbar-toggler {
+    position: relative;
+    border: 2px solid #64a19d !important;
+    border-radius: 10%;
+    color: #64a19d !important;
+    width: 60px;
+    height: 60px;
+  }
+  /* ハンバーガーメニュー */
+  .hambarger {
+    display: flex;
+  }
+  .navMenu {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+  }
+  .openbtn6 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+  }
+  .openbtn6 span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 7px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .openbtn6 span:nth-of-type(1) {
+    top:15px; 
+      width: 35%;
+  }
+  
+  .openbtn6 span:nth-of-type(2) {
+    top:23px;
+      width: 35%;
+  }
+  
+  .openbtn6 span:nth-of-type(3) {
+    top:31px;
+      width: 35%;
+  }
+  /*activeクラスが付与されると線が回転して×になる*/
+
+.openbtn6.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-135deg);
+  width: 30%;
+}
+
+.openbtn6.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn6.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(135deg);
+  width: 30%;
+}
+}
+
+/* スライダーのためのcss */
+.slider {
+  width: 94%;
+  margin:0 auto;
+}
+.slider img {
+  width: 60vw;
+  height: 60vh;
+  object-fit: cover;
+}
+.slider .slick-slide {
+  transform: scale(0.8);
+  transition: all .5s;
+  opacity: 0.5;
+}
+.slider .slick-slide .slick-center {
+  transform: scale(1);
+  opacity: 1;
+}
+/* 矢印 */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 42%;
+  cursor: pointer;
+  outline: none;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 15px;
+  width: 15px;
+}
+.slick-prev {
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+.slick-next {
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+/* ドットナビゲーションの設定 */
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.slick-dots .slick-active button {
+  background-color: #333;
+}
+/* レイアウトのためのcss */
+#home .ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* #home {
+  background-image: url("img/bg-masthead.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+} */
+
+#home::after {
+  content:"";
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0,0, 0.7);
+  z-index: -1;
+}
+
+.btn {
+  color: #fff;
+}
+
+h1 {
+  color: #d2c4c4;
+  font-size: 100px;
+  display: inline-block;
+  background: linear-gradient(to bottom,#fff 20%,#3c3a3a 40%,#fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#home  p {
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.design {
+  color: #8fdcd7;
+}
+
+#about {
+  padding-top: 10rem;
+  background: rgba(0,0,0,0.8);
+}
+
+.about_img {
+  position: relative;
+  z-index: -1;
+  vertical-align: bottom ;
+  height: 40vh;
+  width: 100%;
+  object-fit:cover;
+  overflow-clip-margin:content-box;
+  overflow: hidden;
+}
+
+#profile {
+  padding: 10rem 0;
+}
+
+.work {
+  background-color: #000;
+}
+
+.profile_img {
+  width: 60vw;
+  height: 30vw;
+  object-fit: cover;
+}
+.work_one_img {
+  width: 60vw;
+  height: 30vw;
+  object-fit: cover;
+}
+.work_two_img {
+  width: 60vw;
+  height: 30vw;
+  object-fit: cover;
+}
+
+@media(min-width:992px) {
+  .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d ;
+  }
+}
+#contact {
+  position: relative;
+}
+
+.contact-section {
+  padding: 10rem 0;
+  background-image: url(img/IMG_2113.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+} 
+.contact_h2 {
+  z-index: 2;
+  text-shadow: #000;
+}
+/* #contactForm {
+  z-index: 3;
+} */
+
+/* contact form/* --- お問い合わせフォーム --- */
+/* デザインカスタマイズ */
+div.wpcf7 { background:#fafafa; border:1px solid #ddd; padding:0px; -moz-border-radius:10px; -khtml-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; margin:0 0 30px 0; }
+div.wpcf7 p { padding:20px 20px 0; margin:0; font-size:11px; }
+div.wpcf7 input, .wpcf7 textarea { border:1px solid #ccc; padding:8px; font-size:14px; }
+div.wpcf7 textarea { width:50%; height:150px; }
+div.wpcf7 input.wpcf7-submit {
+   cursor:pointer; color:#fff; font-weight:bold; font-size:14px; width:200px; height:45px; margin:0 auto; display:block;
+   -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+   background:#333; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #808080; border:1px solid #666;
+}
+div.wpcf7 input.wpcf7-submit:hover { background:#006080; box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5), inset 0px 32px 0px -12px #007ea8; border:1px solid #006080; }
+.wpcf7 input.wpcf7-submit:active { box-shadow:none; bottom:-2px; position:relative; }
+.wpcf7 input:focus, .wpcf7 textarea:focus { border:1px solid #009de1; }
+.wpcf7-captchac { border:1px solid #ccc; }
+ 
+ 
+/* エラー個所をわかりやすく表示 */
+.wpcf7 .wpcf7-not-valid { background: #ffb6c1; }
+.wpcf7 span.wpcf7-not-valid-tip {font-size: 80%;}
+.wpcf7 .wpcf7-response-output {margin: 10px 0 0; padding: 8px 35px 8px 14px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.wpcf7 .wpcf7-validation-errors {color: #B94A48; background-color: #F2DEDE; border: 1px solid #EED3D7;}
+.wpcf7 .wpcf7-mail-sent-ok {color: #3A87AD; background-color: #D9EDF7; border: 1px solid #BCE8F1;}
+ 
+/* 必須赤色表示 */
+.wpcf7 .required { color: #f00;}
+/* 任意緑色表示 */
+.wpcf7 .any{ color: #080;}
+
+
+
+.skill-section {
+  background-color: #000;
+}
+.card {
+  border-radius: 5px;
+  box-shadow:10px 10px 10px 1px  #64a19d;
+}
+
+.footer {
+  background-color: #000;
+}
+
+/* --------------------------------------
+single.page
+---------------------------------------- */
+.home_title {
+  color: #d2c4c4;
+  font-size: 100px;
+  display: inline-block;
+  background: linear-gradient(to bottom,#fff 20%,#3c3a3a 40%,#fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home_title_sub {
+  color: #d2c4c4;
+  font-size: 30px;
+  background: linear-gradient(to bottom,#fff 20%,#3c3a3a 40%,#fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 auto 30px;
+}
+
+.news_post_small {
+  max-width: 600px;
+  font-size: 30px;
+}
+
+.news_thumbnail {
+  background-image: cover;
+}
