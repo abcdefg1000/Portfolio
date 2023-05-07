@@ -117,7 +117,7 @@
       <!-- work one -->
       <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" id="works">
         <div class="col-lg-6">
-          <a href="file:///Users/oonotadashiri/Desktop/socialtech/index.html" target="_blank">
+          <a href="<?php echo esc_url(home_url('http://portfolio.local/works/'));?>">
             <img class="img-fluid work_one_img w-100 " src="img/SocialTech.png" alt="">
           </a>
         </div>
@@ -139,7 +139,7 @@
       <!-- work two -->
       <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
         <div class="col-lg-6">
-          <a href="file:///Users/oonotadashiri/Desktop/samurai_university/index.html" target="_blank">
+          <a href="<?php echo esc_url(home_url('http://portfolio.local/works/'));?>">
             <img class="img-fluid work_two_img w-100" src="img/SAMURAI UNIVERSITY.png" alt="">  
           </a>
         </div>
@@ -164,22 +164,12 @@
     <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <h2 class="text-white mb-5 signup_h2">Contact</h2>
-          <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN"></form> 
-          <!-- Email address input-->
-          <div class="row input-group-newsletter">
-            <div class="col">
-              <input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" />
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-dark disabled" id="submitButton" type="submit">Notify Me!</button>
-            </div>
-            <div class="back_color"></div>
-          </div>
+          <h2 class="text-white mb-5 signup_h2"><a href="<?php echo esc_url(home_url(' http://portfolio.local/contact/'));?>" >Contact</a></h2>
         </div>
       </div>
     </div>
   </section>
+
   <!-- skill section -->
   <section class="skill-section bg-black pt-5" id="skill">
     <h2 class="text-white">SKILL</h2>
