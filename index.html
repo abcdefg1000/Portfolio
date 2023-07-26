@@ -22,7 +22,6 @@
       <a class="navbar-brand" href="#">Portfolio</a>
         
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        menu
         <!-- <div class="container hambarger">
           <div class="row gx-4">
             <div class="navMenu"><span>Menu</span></div> -->
@@ -164,16 +163,27 @@
     <div class="container px-4 px-lg-5">
       <div class="row gx-4 gx-lg-5">
         <div class="col-md-10 col-lg-8 mx-auto text-center">
-          <h2 class="text-white mb-5 signup_h2">Contact</h2>
-          <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN"></form> 
+          <h2 class="mb-5 signup_h2">Contact</h2>
+          <form action="#" class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+            <dl>
+              <dt><label for="name">Name:</label></dt>
+              <dd><input type="text" id="name" name="your-name"></dd>
+              <dt><label for="email">Mail:</label></dt>
+              <dd><input type="email" id="email" name="your-email"></dd>
+              <dt><label for="message">Message:</label></dt>
+              <dd><textarea name="your-message" id="message"></textarea></dd>
+            </dl>
+            <div class="button"><input type="submit" value="SEND"></div>
+          </form> 
+          <p class="caution text-w">※実際に送信はされません</p>
           <!-- Email address input-->
-          <div class="row input-group-newsletter">
+          <!-- <div class="row input-group-newsletter">
             <div class="col">
               <input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" />
-            </div>
-            <div class="col-auto">
+            </div> -->
+            <!-- <div class="col-auto">
               <button class="btn btn-dark disabled" id="submitButton" type="submit">Notify Me!</button>
-            </div>
+            </div> -->
             <div class="back_color"></div>
           </div>
         </div>
